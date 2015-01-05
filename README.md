@@ -16,15 +16,14 @@ In order to be able to run this example project you must have the following:
 ##Open a python file
 
 After downloading and installing python, you will see an ![Python Icon]()  icon on the start menu (or on your desktop). It is called IDLE(Python GUI):
-- To open a new python file:
  1) Click on IDLE(Python GUI), it will pop up a window called Python 2.7.9 Shell ![python shell]()
- 2) Choose File → New File to create a new python. Then at the new pop up window, 
-    choose File → Save to save it at wherever you want and whatever name you want.And now you can start coding on it. In this example, let’s save it as “Hello World!” 
+ 
+ 2) Choose File → New File to create a new python. Then at the new pop up window, choose File → Save to save it at wherever you want and whatever name you want.And now you can start coding on it. In this example, let’s save it as “Hello World!” 
 ![python window]()
  
-3) Now type “ print “Hello World!” “ inside the python window ![print()
+ 3) Now type “ print “Hello World!” “ inside the python window ![print()
  
-4) Click “Run” on the menu bar and select “Run module” or press F5 on the keyboard. The result will be shown on the shell related the python window. ![print out]()
+ 4) Click “Run” on the menu bar and select “Run module” or press F5 on the keyboard. The result will be shown on the shell related the python window. ![print out]()
  
 ##Configuring the Project for Python
 
