@@ -15,7 +15,7 @@ In order to be able to run this example project you must have the following:
 
 ##Open a python file
 
-After downloading and installing python, you will see an ![Python Icon]()  icon on the start menu (or on your desktop). It is called IDLE(Python GUI):
+After downloading and installing python, you will see an ![Python Icon](https://cloud.githubusercontent.com/assets/10159467/5621404/0115a41c-94ea-11e4-989e-9595c11f7cb4.png)  icon on the start menu (or on your desktop). It is called IDLE(Python GUI):
 
  1) Click on IDLE(Python GUI), it will pop up a window called Python 2.7.9 Shell ![python shell]()
  
