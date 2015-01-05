@@ -17,7 +17,8 @@ In order to be able to run this example project you must have the following:
 
 After downloading and installing python, you will see an ![Python Icon](https://cloud.githubusercontent.com/assets/10159467/5621404/0115a41c-94ea-11e4-989e-9595c11f7cb4.png)  icon on the start menu (or on your desktop). It is called IDLE(Python GUI):
 
- 1) Click on IDLE(Python GUI), it will pop up a window called Python 2.7.9 Shell ![python shell](https://cloud.githubusercontent.com/assets/10159467/5621408/012b7990-94ea-11e4-8884-391cfef6a7e4.png)
+ 1) Click on IDLE(Python GUI), it will pop up a window called Python 2.7.9 Shell
+ ![python shell](https://cloud.githubusercontent.com/assets/10159467/5621408/012b7990-94ea-11e4-8884-391cfef6a7e4.png)
  
  2) Choose File → New File to create a new python. Then at the new pop up window, choose File → Save to save it at wherever you want and whatever name you want.And now you can start coding on it. In this example, let’s save it as “Hello World!” 
 ![python window]()
