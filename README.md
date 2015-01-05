@@ -16,6 +16,7 @@ In order to be able to run this example project you must have the following:
 ##Open a python file
 
 After downloading and installing python, you will see an ![Python Icon]()  icon on the start menu (or on your desktop). It is called IDLE(Python GUI):
+
  1) Click on IDLE(Python GUI), it will pop up a window called Python 2.7.9 Shell ![python shell]()
  
  2) Choose File → New File to create a new python. Then at the new pop up window, choose File → Save to save it at wherever you want and whatever name you want.And now you can start coding on it. In this example, let’s save it as “Hello World!” 
@@ -28,17 +29,17 @@ After downloading and installing python, you will see an ![Python Icon]()  icon 
 ##Configuring the Project for Python
 
 In order to run this project, please follow these steps: 
-- Download the repository
-○ Go to https://github.com/Benchmark-Email/bmepythonwrapper
-○ Click on the "Download ZIP" button located on the right hand side
-- Once the download is finished, extract the zip file (possibly to your desktop for easy access) ![wrapper folder]()  
-- There are three python files inside the unzipped folder: CreateList&AddContacts.py, BMEApi.py, and xmlrpclib.py. ![three files]() 
+ 1) Download the repository
+    - Go to https://github.com/Benchmark-Email/bmepythonwrapper
+    - Click on the "Download ZIP" button located on the right hand side
+ 2) Once the download is finished, extract the zip file (possibly to your desktop for easy access) ![wrapper folder]()  
+ 3) There are three python files inside the unzipped folder: CreateList&AddContacts.py, BMEApi.py, and xmlrpclib.py. ![three files]() 
 
 Their relationships are:
  
-- The xmlrpclib.py contains all basic setups for the other two files. Try not to change anything in it.
-- The BMEApi.py file calls methods from the xmlrpclib.py file. Its purpose is to establish a connection to the given URI based on the given username and password. Try not to change anything if and only if there is a necessary.
-- The xmlrpclib.py file creates a client by using the BEMApi class. The client can then do many thing by using different methods from the benchmark Email API Documentation. In this assignment, the project calls the listCreate method to create a new list, then calls listAddContacts method to add contacts into the created new list.
+ - The xmlrpclib.py contains all basic setups for the other two files. Try not to change anything in it.
+ - The BMEApi.py file calls methods from the xmlrpclib.py file. Its purpose is to establish a connection to the given URI based on the given username and password. Try not to change anything if and only if there is a necessary.
+ - The xmlrpclib.py file creates a client by using the BEMApi class. The client can then do many thing by using different methods from the benchmark Email API Documentation. In this assignment, the project calls the listCreate method to create a new list, then calls listAddContacts method to add contacts into the created new list.
 
 ##Running the Project
 
