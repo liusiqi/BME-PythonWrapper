@@ -12,7 +12,7 @@ In order to be able to run this example project you must have the following:
 - Python 2.7.9 (Attention: don’t download python 3.0.0 or above)  https://www.python.org/downloads/release/python-279/
 - Choose the right version of Python 2.7.9 for your machine, download it, and install it.
 - No money, our free and paid plans allow you to use our API at no cost. So follow the link and sign up for a free account to receive your API token: https://ui.benchmarkemail.com/Register
-- 
+
 ##Open a python file
 
 After downloading and installing python, you will see an ![Python Icon]()  icon on the start menu (or on your desktop). It is called IDLE(Python GUI):
@@ -40,7 +40,7 @@ Their relationships are:
 - The xmlrpclib.py contains all basic setups for the other two files. Try not to change anything in it.
 - The BMEApi.py file calls methods from the xmlrpclib.py file. Its purpose is to establish a connection to the given URI based on the given username and password. Try not to change anything if and only if there is a necessary.
 - The xmlrpclib.py file creates a client by using the BEMApi class. The client can then do many thing by using different methods from the benchmark Email API Documentation. In this assignment, the project calls the listCreate method to create a new list, then calls listAddContacts method to add contacts into the created new list.
-- 
+
 ##Running the Project
 
  Right click on the CreateList&AddContacts.py file and select “Edit with IDLE”. When the window appears, press F5 or click “Run” → “Run module” ![run]()
