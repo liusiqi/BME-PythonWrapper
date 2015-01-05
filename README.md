@@ -17,7 +17,7 @@ In order to be able to run this example project you must have the following:
 
 After downloading and installing python, you will see an ![Python Icon](https://cloud.githubusercontent.com/assets/10159467/5621404/0115a41c-94ea-11e4-989e-9595c11f7cb4.png)  icon on the start menu (or on your desktop). It is called IDLE(Python GUI):
 
- 1) Click on IDLE(Python GUI), it will pop up a window called Python 2.7.9 Shell ![python shell]()
+ 1) Click on IDLE(Python GUI), it will pop up a window called Python 2.7.9 Shell ![python shell](https://cloud.githubusercontent.com/assets/10159467/5621408/012b7990-94ea-11e4-8884-391cfef6a7e4.png)
  
  2) Choose File → New File to create a new python. Then at the new pop up window, choose File → Save to save it at wherever you want and whatever name you want.And now you can start coding on it. In this example, let’s save it as “Hello World!” 
 ![python window]()
@@ -29,16 +29,21 @@ After downloading and installing python, you will see an ![Python Icon](https://
 ##Configuring the Project for Python
 
 In order to run this project, please follow these steps: 
+
  1) Download the repository
     - Go to https://github.com/Benchmark-Email/bmepythonwrapper
     - Click on the "Download ZIP" button located on the right hand side
+    
  2) Once the download is finished, extract the zip file (possibly to your desktop for easy access) ![wrapper folder]()  
+ 
  3) There are three python files inside the unzipped folder: CreateList&AddContacts.py, BMEApi.py, and xmlrpclib.py. ![three files]() 
 
 Their relationships are:
  
  - The xmlrpclib.py contains all basic setups for the other two files. Try not to change anything in it.
+ 
  - The BMEApi.py file calls methods from the xmlrpclib.py file. Its purpose is to establish a connection to the given URI based on the given username and password. Try not to change anything if and only if there is a necessary.
+
  - The xmlrpclib.py file creates a client by using the BEMApi class. The client can then do many thing by using different methods from the benchmark Email API Documentation. In this assignment, the project calls the listCreate method to create a new list, then calls listAddContacts method to add contacts into the created new list.
 
 ##Running the Project
@@ -52,6 +57,7 @@ Now, you can login to your Benchmark account to see if a new list with two new c
 ##Contact Info
 
 - Visit our API page to view our other wrappers and documentation:
+
 - http://www.benchmarkemail.com/API/Library
 
 ##Licensing
