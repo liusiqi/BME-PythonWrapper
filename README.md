@@ -60,9 +60,9 @@ Their relationships are:
 
 ##Running the Project
 
- Right click on the CreateList&AddContacts.py file and select “Edit with IDLE”. When the window appears, press F5 or click “Run” → “Run module” !
+ Right click on the CreateList&AddContacts.py file and select “Edit with IDLE”. When the window appears, press F5 or click “Run” → “Run module” 
  
- [run](https://cloud.githubusercontent.com/assets/10159467/5621400/01131a6c-94ea-11e4-9f89-686f62206426.png)
+ ![run](https://cloud.githubusercontent.com/assets/10159467/5621400/01131a6c-94ea-11e4-9f89-686f62206426.png)
  
 The result of prints will show on a python shell popping up.
 
