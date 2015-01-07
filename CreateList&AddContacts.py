@@ -19,8 +19,8 @@
 from BMEApi import *
 
 # ----------- Enter you username and password---------------
-USERNAME = "Please enter your username"
-PASSWORD = "Please enter your password"
+USERNAME = "siqi_liu@yahoo.com"
+PASSWORD = "1984siqi"
 # ----------------------------------------------------------
 # ----------- Constant ----------------------
 APIURL = "http://api.benchmarkemail.com/1.0"
@@ -75,15 +75,15 @@ if client.isLogin:
 	contact_number = client.listAddContacts(listID,contacts)
 	
 	if client.isOk: #isOk is a boolean variable of BMEApi class
-		print new_list_ID # prints out list ID
-		print "Total Contacts: ", contact_number # prints out number of contacts added to the list
+		print(new_list_ID) # prints out list ID
+		print("Total Contacts: ", contact_number) # prints out number of contacts added to the list
 
 	else: # an error occurred while at connection
-		print "A fault occurred"
-		print "Fault code: ", client.faultCode
-		print "Fault string: ", client.faultString		
+		print("A fault occurred")
+		print("Fault code: ", client.faultCode)
+		print("Fault string: ", client.faultString)		
 else:
 	# an error occurred while logging in
-	print "A fault occurred"
-	print "Fault code: ", client.faultCode
-	print "Fault string: ", client.faultString
+	print("A fault occurred")
+	print("Fault code: ", client.faultCode)
+	print("Fault string: ", client.faultString)

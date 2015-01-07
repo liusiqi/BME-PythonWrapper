@@ -1,10 +1,10 @@
-import xmlrpclib
+import xmlrpc.client
 class BMEApi(object):	
 	def __init__(self,username,password,ApiURL):
                 # --------variables----------
 		BMEApi.isOk = True	
 		BMEApi.isLogin = True	
-		BMEApi.server = xmlrpclib.Server(ApiURL) #calls Server method from xmlrpclib.py file
+		BMEApi.server = xmlrpc.client.Server(ApiURL) #calls Server method from xmlrpclib.py file
 		# ---------------------------------------
 
 		try:
@@ -16,7 +16,7 @@ class BMEApi(object):
                         #       @Return: the API key associated with the specified Benchmark Email account
 			BMEApi.token = BMEApi.server.login(username, password)
 			#print "Token : ", token
-		except xmlrpclib.Fault, err: #catch up with connection error such as wrong username or password
+		except xmlrpclib.Fault as err: #catch up with connection error such as wrong username or password
 			BMEApi.isLogin = False
 			BMEApi.faultCode = err.faultCode
 			BMEApi.faultString = err.faultString				
@@ -34,7 +34,7 @@ class BMEApi(object):
 					result  =  getattr(BMEApi.server,method_name,None)(BMEApi.token,*args)
 					BMEApi.isOk = True
 					return result
-				except xmlrpclib.Fault, err:					
+				except xmlrpc.client.Fault as err:					
 					BMEApi.isOk = False
 					BMEApi.faultCode = err.faultCode
 					BMEApi.faultString = err.faultString					
