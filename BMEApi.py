@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import xmlrpclib
-class BMEApi(object):	
-	def __init__(self,username,password,ApiURL):
-		BMEApi.isOk = True	
-		BMEApi.isLogin = True	
-		BMEApi.server = xmlrpclib.Server(ApiURL)
-
-		try:
-			BMEApi.isLogin = True
-			BMEApi.token = BMEApi.server.login(username, password)
-			#print "Token : ", token
-		except xmlrpclib.Fault, err:
-=======
 import xmlrpc.client
 class BMEApi(object):	
 	def __init__(self,username,password,ApiURL):
@@ -31,42 +17,38 @@ class BMEApi(object):
 			BMEApi.token = BMEApi.server.login(username, password)
 			#print "Token : ", token
 		except xmlrpclib.Fault as err: #catch up with connection error such as wrong username or password
->>>>>>> bb5e805c12105763743c0a475cd771394f3624aa
 			BMEApi.isLogin = False
 			BMEApi.faultCode = err.faultCode
 			BMEApi.faultString = err.faultString				
 	
-<<<<<<< HEAD
-	def getToken(self):
-		return BMEApi.token
-	
-=======
 	def getToken(self): 
 		return BMEApi.token #the method of getting a token
 
-	# This method is a little to understand, if you can't get it, it is totally fine.
-	# The purpose of this method is when the token is created, it is set as one of the attributes of the server.
-	# So that developers don't have to assign the token into a variable and use it at every method that needs the token. This method
-	# already set the token as a attribute of the server. It is used under cover which is more safty. 
->>>>>>> bb5e805c12105763743c0a475cd771394f3624aa
+	# __getattr__ is used to handle the scenario that an attribute is not found. For example:
+	# class foo:
+	#       a = 0
+	#       def __getattr__(self,name):
+	#	        return "%s:DEFAULT"%name
+	#>>> i.c
+        #'c:DEFAULT'
+	#
+	# 1) Usually, Object.NotFoundMethod(argument) will return an error. If we define __getattr__, it will return whatever is defined in __getattr__
+	# 2) In this case, you see inside the __getattr__ function, there is another function calls the getattr(object, name) function.
+	# 3) The getattr(object, name) function is like creating a new method object.name which is not originally defined in the class.
+	# 4) So object.name is a run-time created method, we could assign it argument(s) or not.
+	# 5) Then getattr(object, name)(AnotherObject, entry) is the same as object.name(AnotherObject, entry).
+	# 6) The arguments of the new created method include the access token and the entry of whatever the user wants.
+	# 7) If the server accepts what the method is doing such as sending new API call or new query, it responses what is asked to send back.
 	def __getattr__(self, method_name):
 			def get(self, *args, **kwargs):								
 				try:
 					result  =  getattr(BMEApi.server,method_name,None)(BMEApi.token,*args)
 					BMEApi.isOk = True
 					return result
-<<<<<<< HEAD
-				except xmlrpclib.Fault, err:					
-=======
 				except xmlrpc.client.Fault as err:					
->>>>>>> bb5e805c12105763743c0a475cd771394f3624aa
 					BMEApi.isOk = False
 					BMEApi.faultCode = err.faultCode
 					BMEApi.faultString = err.faultString					
 					return ""	
 			
-<<<<<<< HEAD
 			return get.__get__(self)	
-=======
-			return get.__get__(self)	
->>>>>>> bb5e805c12105763743c0a475cd771394f3624aa
